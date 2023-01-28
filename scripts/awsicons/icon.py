@@ -177,6 +177,7 @@ class Icon:
                 puml_content += f"!function ${target}IMG($scale=1)\n"
                 puml_content += f"!return \"<img data:image/png;base64,{encoded_string.decode()}{{scale=\"+$scale+\"}}>\"\n"
                 puml_content += f"!endfunction\n\n"
+                puml_content += f"!define AWS_COLOR_{target} {color}\n\n"
 
         if group:
             puml_content += f"AWSGroupColoring({target}Group, {group_background_color}, {group_border_color}, {group_border_style})\n"
